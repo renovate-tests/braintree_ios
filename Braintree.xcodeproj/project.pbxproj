@@ -84,6 +84,9 @@
 		039A8BD81F9E627A00D607E7 /* BTAmericanExpressRewardsBalance.m in Sources */ = {isa = PBXBuildFile; fileRef = 039A8BD41F9E624400D607E7 /* BTAmericanExpressRewardsBalance.m */; };
 		039A8BDA1F9E993500D607E7 /* BTAmericanExpressRewardsBalance_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039A8BD91F9E993500D607E7 /* BTAmericanExpressRewardsBalance_Tests.swift */; };
 		03B368B31CAD95D300CDFC9C /* BraintreeDemoDropInLegacyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B368B21CAD95D300CDFC9C /* BraintreeDemoDropInLegacyViewController.m */; };
+		03B9D0D52347EB770005F8D4 /* BTPayPalUAT.h in Headers */ = {isa = PBXBuildFile; fileRef = 03B9D0D32347EB770005F8D4 /* BTPayPalUAT.h */; };
+		03B9D0D62347EB770005F8D4 /* BTPayPalUAT.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B9D0D42347EB770005F8D4 /* BTPayPalUAT.m */; };
+		03B9D0D72347EF220005F8D4 /* BTPayPalUAT.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B9D0D42347EB770005F8D4 /* BTPayPalUAT.m */; };
 		03BFA5D91FB4CA650003ABCE /* BTThreeDSecure_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BFA5D81FB4CA650003ABCE /* BTThreeDSecure_Tests.swift */; };
 		03C41071211E336E00CFB2AF /* PayPalOneTouch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A50C3B6F1C1A29C500612D90 /* PayPalOneTouch.framework */; };
 		03CED23A1F8D77C9000A5F4F /* BTThreeDSecureLookup.m in Sources */ = {isa = PBXBuildFile; fileRef = 03CED2391F8D77C9000A5F4F /* BTThreeDSecureLookup.m */; };
@@ -349,10 +352,10 @@
 		420E3B592329869B00550CE2 /* BTAuthenticationInsight.h in Headers */ = {isa = PBXBuildFile; fileRef = 420E3B572329869B00550CE2 /* BTAuthenticationInsight.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		420E3B5A2329869B00550CE2 /* BTAuthenticationInsight.m in Sources */ = {isa = PBXBuildFile; fileRef = 420E3B582329869B00550CE2 /* BTAuthenticationInsight.m */; };
 		420E3B5C2329947200550CE2 /* BTAuthenticationInsight_Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 420E3B5B2329943000550CE2 /* BTAuthenticationInsight_Internal.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		42F2FF2F2333D2B20083CA10 /* BTAuthenticationInsight_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F2FF2E2333D2B20083CA10 /* BTAuthenticationInsight_Tests.swift */; };
 		423B6D8623390F8D00646742 /* BTThreeDSecureResult_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423B6D8523390F8D00646742 /* BTThreeDSecureResult_Tests.swift */; };
 		42D79394233A62A7001FDD89 /* BTThreeDSecureRequest_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D79393233A62A7001FDD89 /* BTThreeDSecureRequest_Tests.swift */; };
 		42D79396233A65EB001FDD89 /* MockPaymentFlowDriverDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D79395233A65EB001FDD89 /* MockPaymentFlowDriverDelegate.swift */; };
+		42F2FF2F2333D2B20083CA10 /* BTAuthenticationInsight_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F2FF2E2333D2B20083CA10 /* BTAuthenticationInsight_Tests.swift */; };
 		46E2F09F1CF47CF700A5789D /* BTUICardPhoneNumberField.m in Sources */ = {isa = PBXBuildFile; fileRef = 4107EB221C88C75000F32D81 /* BTUICardPhoneNumberField.m */; };
 		46E2F0A01CF47D3300A5789D /* BTUIUnionPayVectorArtView.m in Sources */ = {isa = PBXBuildFile; fileRef = A78422721C98920500D3EBFF /* BTUIUnionPayVectorArtView.m */; };
 		68178D54CF930DF9D5BC76FB /* libPods-Demo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A3D9C499891AB1363F3E1290 /* libPods-Demo.a */; };
@@ -1374,6 +1377,8 @@
 		039A8BD91F9E993500D607E7 /* BTAmericanExpressRewardsBalance_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTAmericanExpressRewardsBalance_Tests.swift; sourceTree = "<group>"; };
 		03B368B11CAD95D300CDFC9C /* BraintreeDemoDropInLegacyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BraintreeDemoDropInLegacyViewController.h; sourceTree = "<group>"; };
 		03B368B21CAD95D300CDFC9C /* BraintreeDemoDropInLegacyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BraintreeDemoDropInLegacyViewController.m; sourceTree = "<group>"; };
+		03B9D0D32347EB770005F8D4 /* BTPayPalUAT.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTPayPalUAT.h; sourceTree = "<group>"; };
+		03B9D0D42347EB770005F8D4 /* BTPayPalUAT.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTPayPalUAT.m; sourceTree = "<group>"; };
 		03BFA5D81FB4CA650003ABCE /* BTThreeDSecure_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTThreeDSecure_Tests.swift; sourceTree = "<group>"; };
 		03CED2391F8D77C9000A5F4F /* BTThreeDSecureLookup.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTThreeDSecureLookup.m; sourceTree = "<group>"; };
 		03CFEF241CD304B0006D2DA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -1455,10 +1460,10 @@
 		420E3B572329869B00550CE2 /* BTAuthenticationInsight.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTAuthenticationInsight.h; sourceTree = "<group>"; };
 		420E3B582329869B00550CE2 /* BTAuthenticationInsight.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTAuthenticationInsight.m; sourceTree = "<group>"; };
 		420E3B5B2329943000550CE2 /* BTAuthenticationInsight_Internal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTAuthenticationInsight_Internal.h; sourceTree = "<group>"; };
-		42F2FF2E2333D2B20083CA10 /* BTAuthenticationInsight_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTAuthenticationInsight_Tests.swift; sourceTree = "<group>"; };
 		423B6D8523390F8D00646742 /* BTThreeDSecureResult_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTThreeDSecureResult_Tests.swift; sourceTree = "<group>"; };
 		42D79393233A62A7001FDD89 /* BTThreeDSecureRequest_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTThreeDSecureRequest_Tests.swift; sourceTree = "<group>"; };
 		42D79395233A65EB001FDD89 /* MockPaymentFlowDriverDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPaymentFlowDriverDelegate.swift; sourceTree = "<group>"; };
+		42F2FF2E2333D2B20083CA10 /* BTAuthenticationInsight_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTAuthenticationInsight_Tests.swift; sourceTree = "<group>"; };
 		4621B720EE8A9B65FFFE3632 /* Pods-Tests-UnitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests-UnitTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tests-UnitTests/Pods-Tests-UnitTests.release.xcconfig"; sourceTree = "<group>"; };
 		7EDE47701CD2C3D00005E22B /* PayPalUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PayPalUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		80036F7B21F7BAC6003A9F5C /* BTConfiguration+ThreeDSecure.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BTConfiguration+ThreeDSecure.h"; sourceTree = "<group>"; };
@@ -2589,6 +2594,8 @@
 				A7A6DD151B4312DC008857E1 /* BTLogger.m */,
 				41211EF61BA0E45300DB1705 /* BTPaymentMethodNonce.m */,
 				415924B01BA0F2A900C095F6 /* BTPaymentMethodNonceParser.m */,
+				03B9D0D32347EB770005F8D4 /* BTPayPalUAT.h */,
+				03B9D0D42347EB770005F8D4 /* BTPayPalUAT.m */,
 				A72E134C1B44630C002703DD /* BTPostalAddress.m */,
 				A773462F1B7BB1A70083EC8D /* BTTokenizationService.m */,
 				A717542F1BDEF1EC00002676 /* BTURLUtils.h */,
@@ -3766,6 +3773,7 @@
 				2DE12F4C1B59C36900EA1BCF /* BTHTTP.h in Headers */,
 				A71754301BDEF1EC00002676 /* BTURLUtils.h in Headers */,
 				2DE12F481B59C36900EA1BCF /* BTAPIPinnedCertificates.h in Headers */,
+				03B9D0D52347EB770005F8D4 /* BTPayPalUAT.h in Headers */,
 				2DE12F4E1B59C36900EA1BCF /* BTHTTPErrors.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -4969,6 +4977,7 @@
 				2DE12F531B59C36900EA1BCF /* BTKeychain.m in Sources */,
 				2DE12F5C1B59C36900EA1BCF /* BTURLUtils.m in Sources */,
 				A74BF1C61C57F25F0049E149 /* BTAnalyticsService.m in Sources */,
+				03B9D0D62347EB770005F8D4 /* BTPayPalUAT.m in Sources */,
 				A77346311B7BB1A70083EC8D /* BTTokenizationService.m in Sources */,
 				2DE12F4D1B59C36900EA1BCF /* BTHTTP.m in Sources */,
 				2DE12F511B59C36900EA1BCF /* BTJSON.m in Sources */,
@@ -5093,6 +5102,7 @@
 				417404B91BB0864F008A5DEA /* BTPayPalDriver.m in Sources */,
 				417404BC1BB0864F008A5DEA /* BTPayPalRequestFactory.m in Sources */,
 				417404BF1BB0864F008A5DEA /* BTPayPalAccountNonce.m in Sources */,
+				03B9D0D72347EF220005F8D4 /* BTPayPalUAT.m in Sources */,
 				4174047D1BB08629008A5DEA /* BTAnalyticsMetadata.m in Sources */,
 				46E2F09F1CF47CF700A5789D /* BTUICardPhoneNumberField.m in Sources */,
 				4174047F1BB08629008A5DEA /* BTAPIClient.m in Sources */,
