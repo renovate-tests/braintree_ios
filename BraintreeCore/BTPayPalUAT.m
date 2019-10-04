@@ -75,7 +75,7 @@ NSString * const BTPayPalUATErrorDomain = @"com.braintreepayments.BTPayPalUATErr
     NSArray *externalIds = [self.json[@"external_ids"] asArray];
     NSString *braintreeMerchantID;
     for (NSString *externalId in externalIds) {
-        if ([externalId hasPrefix:@"BRAINTREE:"]) {
+        if ([externalId hasPrefix:@"Braintree:"]) {
             braintreeMerchantID = [externalId componentsSeparatedByString:@":"][1];
             break;
         }
