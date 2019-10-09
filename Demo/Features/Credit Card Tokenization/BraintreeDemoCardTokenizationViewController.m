@@ -58,7 +58,6 @@
 - (IBAction)submitForm {
     self.progressBlock(@"Tokenizing card details!");
 
-    self.apiClient = [[BTAPIClient alloc] initWithAuthorization:@"eyJraWQiOiI1NTY1MWVhZWE0MjZjZDVhMjM5ZWU0ZjUwMTczMDk3NmI2YzMxZmNkIiwidHlwIjoiSldUIiwiYWxnIjoiRVMyNTYifQ.eyJpc3MiOiJodHRwczovL2FwaS5wYXlwYWwuY29tIiwic3ViIjoiUGF5UGFsOlE3QzlONlM0WVJRWEciLCJhY3IiOlsiY2xpZW50Il0sIm9wdGlvbnMiOnt9LCJheiI6InRlLXBwY3AtbmF0aXZlc2RrX2lkZW50aXR5c2VjdXJldG9rZW5zZXJ2XzAucWEiLCJzY29wZXMiOlsiQnJhaW50cmVlOlZhdWx0Il0sImV4cCI6MTU3MDI1NjU0NywiZXh0ZXJuYWxfaWRzIjpbIlBheVBhbDpRN0M5TjZTNFlSUVhHIiwiQnJhaW50cmVlOmZtaHdoMnN3ZHo2bnJqZDciXSwianRpIjoiVTJBQUdsMjY5X3NOY0s4V01YMkcxbnRiVnptR1prOWZFUXVvV3R1cUw5bG8yamcxV2ZJM1FhNHd1NTJhZ09qb0FzQkNWMXJlVVR4MHBMWURSV1RkUXg2bXFzcmI0OFJzdWJER0lLeFZjX0RxcnZoNXBHczkyWXVWZC1lN2lXcncifQ.hyCiRqE3uO_IrHGXW1DJ1CQKQHQ0impBayIVisL43Qv64HJxYLVfDwuNnG7YzGuZx-1Q26engzs5hfdvHGzT-g"];
     BTCardClient *cardClient = [[BTCardClient alloc] initWithAPIClient:self.apiClient];
     BTCard *card = [[BTCard alloc] initWithNumber:self.cardNumberField.text
                                                                            expirationMonth:self.expirationMonthField.text

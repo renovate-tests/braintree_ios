@@ -77,7 +77,8 @@ static NSString *PayPalDataCollectorClassString = @"PPDataCollector";
         }
 
         // Union Pay tokenization requests should not go through the GraphQL API
-        if ([self isGraphQLEnabledForCardTokenization:configuration] && !request.enrollmentID) {
+        // TODO DO NOT MERGE, remove conditional !self.apiClient.payPalUAT
+        if ([self isGraphQLEnabledForCardTokenization:configuration] && !request.enrollmentID && !self.apiClient.payPalUAT) {
             
             if (request.card.authenticationInsightRequested && !request.card.merchantAccountId) {
                 NSError *error = [NSError errorWithDomain:BTCardClientErrorDomain
