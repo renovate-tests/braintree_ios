@@ -37,17 +37,19 @@ class BTAPIClient_SwiftTests: XCTestCase {
     }
 
     func testAPIClientInitialization_withValidPayPalUAT_returnsClientWithPayPalUAT() {
-        let payPalUAT = "1a.2b.3c-_"
+        let payPalUAT = "123.ewogICAiaXNzIjoiaHR0cHM6Ly9hcGkucGF5cGFsLmNvbSIsCiAgICJzdWIiOiJQYXlQYWw6ZmFrZS1wcC1tZXJjaGFudCIsCiAgICJhY3IiOlsKICAgICAgImNsaWVudCIKICAgXSwKICAgInNjb3BlcyI6WwogICAgICAiQnJhaW50cmVlOlZhdWx0IgogICBdLAogICAiZXhwIjoxNTcxOTgwNTA2LAogICAiZXh0ZXJuYWxfaWRzIjpbCiAgICAgICJQYXlQYWw6ZmFrZS1wcC1tZXJjaGFudCIsCiAgICAgICJCcmFpbnRyZWU6ZmFrZS1idC1tZXJjaGFudCIKICAgXSwKICAgImp0aSI6ImZha2UtanRpIgp9.456"
         let apiClient = BTAPIClient(authorization: payPalUAT)
-        XCTAssertEqual(apiClient?.payPalUAT?.authorizationFingerprint, payPalUAT)
+        XCTAssertEqual(apiClient?.payPalUAT?.token, payPalUAT)
     }
 
     func testAPIClientIntialization_withInvalidPayPalUAT_returnsNil() {
-        let payPalUAT = "broken....uat"
+        let payPalUAT = "broken.paypal.uat"
         let apiClient = BTAPIClient(authorization: payPalUAT)
         XCTAssertNil(apiClient)
     }
 
+    // MARK: - authorizationType
+    
     func testAPIClientAuthorizationType_forTokenizationKey() {
         let tokenizationKey = "sandbox_test1xxx_123xx2swdz6nxxx7"
         let apiClientAuthType = BTAPIClient.authorizationType(forAuthorization: tokenizationKey)
