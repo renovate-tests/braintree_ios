@@ -13,6 +13,7 @@
 #import "BraintreeUI.h"
 #import "PayPalOneTouch.h"
 #import "BraintreePaymentFlow.h"
+#import "BraintreeUnionPay.h"
 
 // Internal headers for testing
 #import "BTAmericanExpressClient_Internal.h"
@@ -20,7 +21,6 @@
 #import "BTApplePayClient_Internal.h"
 #import "BTCard_Internal.h"
 #import "BTCardClient_Internal.h"
-#import "BTCardClient+UnionPay.h"
 #import "BTCardNonce_Internal.h"
 #import "BTConfiguration.h"
 #import "BTDataCollector_Internal.h"
@@ -48,6 +48,7 @@
 #import "BTThreeDSecureAuthenticateJWT.h"
 #import "BTAuthenticationInsight_Internal.h"
 #import "BTPayPalUAT.h"
+#import "BTThreeDSecureV1BrowserSwitchHelper.h"
 
 #import "BTDropInUtil.h"
 #import "BTSpecHelper.h"
