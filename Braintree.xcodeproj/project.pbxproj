@@ -2622,9 +2622,9 @@
 		A715593F1B729297007DE6F0 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				A75BAC671C1F691C00D66FB5 /* BTIntegrationTestsConstants.h */,
 				A71559401B729297007DE6F0 /* BTNonceValidationHelper.h */,
 				A71559411B729297007DE6F0 /* BTNonceValidationHelper.m */,
-				A75BAC671C1F691C00D66FB5 /* BTIntegrationTestsConstants.h */,
 				80DBE69423A931A600373230 /* Helpers.swift */,
 			);
 			path = Helpers;
