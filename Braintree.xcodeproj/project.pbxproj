@@ -2125,8 +2125,6 @@
 				031B94BA1C34822800F136C8 /* Braintree-UI-Specs */,
 				806E0E5C236345AB00500DCA /* Braintree3DSecure_UnitTests */,
 				806E0E5A2363450500500DCA /* BraintreeAmericanExpress_UnitTests */,
-				42FCA84C23623FEC00018B43 /* BTPayPalUAT_Tests.swift */,
-				42138C6F2367567400376E80 /* BTPayPalUAT_Tests.m */,
 				806E0E5B2363451E00500DCA /* BraintreeApplePay_UnitTests */,
 				806E0E5E236347EB00500DCA /* BraintreeCard_UnitTests */,
 				806E0E5F2363489200500DCA /* BraintreeCore_UnitTests */,
@@ -2155,7 +2153,6 @@
 				41DDA59EDD9A2E6BEBF17B8C /* Pods-Tests-UnitTests.debug.xcconfig */,
 				4580C69D5D9736880047422A /* Pods-Tests-UnitTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -2429,6 +2426,8 @@
 		806E0E5F2363489200500DCA /* BraintreeCore_UnitTests */ = {
 			isa = PBXGroup;
 			children = (
+				42FCA84C23623FEC00018B43 /* BTPayPalUAT_Tests.swift */,
+				42138C6F2367567400376E80 /* BTPayPalUAT_Tests.m */,
 				A7B861BE1C24B19300A2422E /* BTVersion_Tests.swift */,
 				805FD35B2331780F0000B514 /* BTPostalAddress_Tests.swift */,
 				A726BFE11B56D5E900B5C8F0 /* BTAnalyticsMetadataSpec.m */,
