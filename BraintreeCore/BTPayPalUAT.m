@@ -3,13 +3,6 @@
 
 NSString * const BTPayPalUATErrorDomain = @"com.braintreepayments.BTPayPalUATErrorDomain";
 
-@interface BTPayPalUAT()
-
-@property (nonatomic, readwrite, strong) NSURL *configURL;
-@property (nonatomic, readwrite, copy) NSString *token;
-
-@end
-
 @implementation BTPayPalUAT
 
 - (instancetype)init {
@@ -42,7 +35,23 @@ NSString * const BTPayPalUATErrorDomain = @"com.braintreepayments.BTPayPalUATErr
             }
             return nil;
         }
-                
+        
+        NSString *basePayPalURL = [json[@"iss"] asString];
+        
+        // TODO: - get this field from the UAT
+        NSString *baseBraintreeURL = @"";
+
+        if (!basePayPalURL || !baseBraintreeURL) {
+            if (error) {
+                *error = [NSError errorWithDomain:BTPayPalUATErrorDomain
+                                             code:0
+                                         userInfo:@{NSLocalizedDescriptionKey:@"Invalid PayPal UAT: Issuer missing or unknown."}];
+            }
+            return nil;
+        }
+        
+        _basePayPalURL = [NSURL URLWithString:basePayPalURL];
+        _baseBraintreeURL = [NSURL URLWithString:baseBraintreeURL];
         _configURL = [NSURL URLWithString:[NSString stringWithFormat:@"/merchants/%@/client_api/v1/configuration", braintreeMerchantID]];
         _token = uatString;
     }
