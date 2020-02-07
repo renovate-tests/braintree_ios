@@ -2,6 +2,7 @@ import XCTest
 
 class BTPayPalUAT_Tests: XCTestCase {
 
+    // TODO: - make sure this passes once PP UAT returns PayPal and Braintree URLs for each environment
     func testInitWithUATString_setsAllProperties() {
         let dict: [String : Any] = [
             "iss": "https://api.paypal.com",

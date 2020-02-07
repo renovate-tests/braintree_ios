@@ -36,7 +36,8 @@ NSString * const BTPayPalUATErrorDomain = @"com.braintreepayments.BTPayPalUATErr
             return nil;
         }
         
-        NSString *basePayPalURL = [json[@"iss"] asString];
+        // TODO: - get this field from the UAT
+        NSString *basePayPalURL = @"https://api.ppcpn.stage.paypal.com"; // [json[@"iss"] asString];
         
         // TODO: - get this field from the UAT
         NSString *baseBraintreeURL = @"https://api.sandbox.braintreegateway.com:443";
