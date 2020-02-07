@@ -70,7 +70,7 @@
 }
 
 - (instancetype)initWithPayPalUAT:(BTPayPalUAT *)payPalUAT {
-    return [self initWithBaseURL:payPalUAT.baseBraintreeURL authorizationFingerprint:payPalUAT];
+    return [self initWithBaseURL:payPalUAT.baseBraintreeURL authorizationFingerprint:payPalUAT.token];
 }
 
 - (instancetype)copyWithZone:(NSZone *)zone {

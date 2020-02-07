@@ -39,7 +39,7 @@ NSString * const BTPayPalUATErrorDomain = @"com.braintreepayments.BTPayPalUATErr
         NSString *basePayPalURL = [json[@"iss"] asString];
         
         // TODO: - get this field from the UAT
-        NSString *baseBraintreeURL = @"";
+        NSString *baseBraintreeURL = @"https://api.sandbox.braintreegateway.com:443";
 
         if (!basePayPalURL || !baseBraintreeURL) {
             if (error) {
