@@ -35,14 +35,20 @@ NSString * const BTPayPalUATErrorDomain = @"com.braintreepayments.BTPayPalUATErr
             }
             return nil;
         }
-        
-        // TODO: - get this field from the UAT
-        NSString *basePayPalURL = @"https://api.ppcpn.stage.paypal.com"; // [json[@"iss"] asString];
-        
-        // TODO: - get this field from the UAT
-        NSString *baseBraintreeURL = @"https://api.sandbox.braintreegateway.com:443";
 
-        if (!basePayPalURL || !baseBraintreeURL) {
+        NSString *basePayPalURL = [json[@"iss"] asString];
+        
+        NSString *braintreeGatewayURL;
+        
+        // TODO: - get the braintree URL from the PP UAT instead of hardcoding; waiting for PP UAT to include BT endpoint
+        if ([basePayPalURL isEqualToString:@"https://api.paypal.com"] ) {
+            braintreeGatewayURL = @"https://api.braintreegateway.com:443";
+        } else if ([basePayPalURL isEqualToString:@"https://api.msmaster.qa.paypal.com"]
+                   || [basePayPalURL isEqualToString:@"https://api.sandbox.paypal.com"]) {
+            braintreeGatewayURL = @"https://api.sandbox.braintreegateway.com:443";
+        }
+
+        if (!basePayPalURL || !braintreeGatewayURL) {
             if (error) {
                 *error = [NSError errorWithDomain:BTPayPalUATErrorDomain
                                              code:0
@@ -52,8 +58,8 @@ NSString * const BTPayPalUATErrorDomain = @"com.braintreepayments.BTPayPalUATErr
         }
         
         _basePayPalURL = [NSURL URLWithString:basePayPalURL];
-        _baseBraintreeURL = [NSURL URLWithString:baseBraintreeURL];
-        _configURL = [NSURL URLWithString:[NSString stringWithFormat:@"/merchants/%@/client_api/v1/configuration", braintreeMerchantID]];
+        _baseBraintreeURL = [NSURL URLWithString: [NSString stringWithFormat:@"%@/merchants/%@/client_api", braintreeGatewayURL, braintreeMerchantID]];
+        _configURL = [NSURL URLWithString:[NSString stringWithFormat:@"%@/v1/configuration", _baseBraintreeURL]];
         _token = uatString;
     }
 

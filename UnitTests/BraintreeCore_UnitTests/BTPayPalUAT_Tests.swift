@@ -26,9 +26,9 @@ class BTPayPalUAT_Tests: XCTestCase {
         let payPalUAT = try? BTPayPalUAT(uatString: uatString)
         XCTAssertNotNil(payPalUAT)
         XCTAssertEqual(payPalUAT?.token, uatString)
-        XCTAssertEqual(payPalUAT?.configURL, URL(string: "/merchants/fake-bt-merchant/client_api/v1/configuration"))
+        XCTAssertEqual(payPalUAT?.configURL, URL(string: "https://some-braintree-url.com/merchants/fake-bt-merchant/client_api/v1/configuration"))
         XCTAssertEqual(payPalUAT?.basePayPalURL, URL(string: "https://api.paypal.com"))
-        XCTAssertEqual(payPalUAT?.baseBraintreeURL, URL(string: "https://some-braintree-url.com"))
+        XCTAssertEqual(payPalUAT?.baseBraintreeURL, URL(string: "https://some-braintree-url.com/merchants/fake-bt-merchant/client_api"))
     }
     
     func testInitWithUATString_whenZeroPaddingCharactersAreRequired_createsUAT() {
