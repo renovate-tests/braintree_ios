@@ -1,38 +1,38 @@
 PODS:
-  - Braintree/3D-Secure (4.31.0):
+  - Braintree/3D-Secure (4.32.1):
     - Braintree/Card
     - Braintree/Core
-  - Braintree/AmericanExpress (4.31.0):
+  - Braintree/AmericanExpress (4.32.1):
     - Braintree/Core
-  - Braintree/Apple-Pay (4.31.0):
+  - Braintree/Apple-Pay (4.32.1):
     - Braintree/Core
-  - Braintree/Card (4.31.0):
+  - Braintree/Card (4.32.1):
     - Braintree/Core
-  - Braintree/Core (4.31.0)
-  - Braintree/DataCollector (4.31.0):
+  - Braintree/Core (4.32.1)
+  - Braintree/DataCollector (4.32.1):
     - Braintree/Core
-  - Braintree/PaymentFlow (4.31.0):
+  - Braintree/PaymentFlow (4.32.1):
     - Braintree/Card
     - Braintree/Core
     - Braintree/PayPalOneTouch
-  - Braintree/PayPal (4.31.0):
+  - Braintree/PayPal (4.32.1):
     - Braintree/Core
     - Braintree/PayPalOneTouch
-  - Braintree/PayPalDataCollector (4.31.0):
+  - Braintree/PayPalDataCollector (4.32.1):
     - Braintree/Core
     - Braintree/PayPalUtils
-  - Braintree/PayPalOneTouch (4.31.0):
+  - Braintree/PayPalOneTouch (4.32.1):
     - Braintree/Core
     - Braintree/PayPalDataCollector
     - Braintree/PayPalUtils
-  - Braintree/PayPalUtils (4.31.0)
-  - Braintree/UI (4.31.0):
+  - Braintree/PayPalUtils (4.32.1)
+  - Braintree/UI (4.32.1):
     - Braintree/Card
     - Braintree/Core
-  - Braintree/UnionPay (4.31.0):
+  - Braintree/UnionPay (4.32.1):
     - Braintree/Card
     - Braintree/Core
-  - Braintree/Venmo (4.31.0):
+  - Braintree/Venmo (4.32.1):
     - Braintree/Core
     - Braintree/PayPalDataCollector
   - BraintreeDropIn (99.99.99-github-master):
@@ -42,23 +42,23 @@ PODS:
     - BraintreeDropIn/UIKit
   - BraintreeDropIn/UIKit (99.99.99-github-master)
   - Expecta (1.0.6)
-  - InAppSettingsKit (2.9.1)
+  - InAppSettingsKit (2.14)
   - "NSURL+QueryDictionary (1.2.0)"
-  - OCMock (3.4.2)
-  - OHHTTPStubs (6.1.0):
-    - OHHTTPStubs/Default (= 6.1.0)
-  - OHHTTPStubs/Core (6.1.0)
-  - OHHTTPStubs/Default (6.1.0):
+  - OCMock (3.5)
+  - OHHTTPStubs (9.0.0):
+    - OHHTTPStubs/Default (= 9.0.0)
+  - OHHTTPStubs/Core (9.0.0)
+  - OHHTTPStubs/Default (9.0.0):
     - OHHTTPStubs/Core
     - OHHTTPStubs/JSON
     - OHHTTPStubs/NSURLSession
     - OHHTTPStubs/OHPathHelpers
-  - OHHTTPStubs/JSON (6.1.0):
+  - OHHTTPStubs/JSON (9.0.0):
     - OHHTTPStubs/Core
-  - OHHTTPStubs/NSURLSession (6.1.0):
+  - OHHTTPStubs/NSURLSession (9.0.0):
     - OHHTTPStubs/Core
-  - OHHTTPStubs/OHPathHelpers (6.1.0)
-  - PureLayout (3.1.2)
+  - OHHTTPStubs/OHPathHelpers (9.0.0)
+  - PureLayout (3.1.5)
   - Specta (1.0.7)
 
 DEPENDENCIES:
@@ -102,20 +102,20 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   BraintreeDropIn:
-    :commit: 1530119fa9d2f6ce96152dc1e5560c57a2314a9b
+    :commit: f54ff5548a5578ead73b974f8d7f7c755e7b9570
     :git: https://github.com/braintree/braintree-ios-drop-in.git
 
 SPEC CHECKSUMS:
-  Braintree: c20fb599a8cfee54ad7dfc603dee68f0922bfcba
+  Braintree: b06d2b42f0c591e508f7f538a7cc6715af1958b7
   BraintreeDropIn: ca284a08c31fb49485883cdcfb87c69422a9b343
   Expecta: 3b6bd90a64b9a1dcb0b70aa0e10a7f8f631667d5
-  InAppSettingsKit: acb6bc78cf00bbcfa63c4a26fd67f266bc7cfcd2
+  InAppSettingsKit: 800853da39388780c15191846688c0974c5b13b5
   "NSURL+QueryDictionary": bae616404e2adf6409d3d5c02a093cbf44c8a236
-  OCMock: ebe9ee1dca7fbed0ff9193ac0b3e2d8862ea56f6
-  OHHTTPStubs: 1e21c7d2c084b8153fc53d48400d8919d2d432d0
-  PureLayout: 4634d0b61e3b5021166e8ec7c18e9e0ca0720c8b
+  OCMock: 4ab4577fc941af31f4a0398f6e7e230cf21fc72a
+  OHHTTPStubs: cb29d2a9d09a828ecb93349a2b0c64f99e0db89f
+  PureLayout: 9b4ad47b2f0388c84ff534af23d96e720c1b875a
   Specta: 3e1bd89c3517421982dc4d1c992503e48bd5fe66
 
 PODFILE CHECKSUM: 5b05d04ef2c8083e178dc0765d9f22c4fe9243f5
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.9.0

@@ -23,6 +23,7 @@
 #import "BTCardClient_Internal.h"
 #import "BTCardNonce_Internal.h"
 #import "BTConfiguration.h"
+#import "BTConfiguration+GraphQL.h"
 #import "BTDataCollector_Internal.h"
 #import "BTPayPalDriver_Internal.h"
 #import "BTVenmoDriver_Internal.h"
@@ -49,6 +50,8 @@
 #import "BTAuthenticationInsight_Internal.h"
 #import "BTPayPalUAT.h"
 #import "BTThreeDSecureV1BrowserSwitchHelper.h"
+#import "BTPreferredPaymentMethodsResult_Internal.h"
+#import "BTPreferredPaymentMethods_Internal.h"
 
 #import "BTDropInUtil.h"
 #import "BTSpecHelper.h"
