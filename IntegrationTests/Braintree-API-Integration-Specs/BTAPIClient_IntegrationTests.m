@@ -69,7 +69,6 @@
             XCTAssertNil(error);
             [expectation fulfill];
         }];
-
     }];
 
     [self waitForExpectationsWithTimeout:20 handler:nil];
