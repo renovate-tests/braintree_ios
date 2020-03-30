@@ -102,7 +102,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   BraintreeDropIn:
-    :commit: f54ff5548a5578ead73b974f8d7f7c755e7b9570
+    :commit: 3984713ea3ee77ff2063b5efc305976945caab2f
     :git: https://github.com/braintree/braintree-ios-drop-in.git
 
 SPEC CHECKSUMS:
@@ -116,6 +116,6 @@ SPEC CHECKSUMS:
   PureLayout: 9b4ad47b2f0388c84ff534af23d96e720c1b875a
   Specta: 3e1bd89c3517421982dc4d1c992503e48bd5fe66
 
-PODFILE CHECKSUM: 414e93545a23d506e11f9ead04c69bf3d9681056
+PODFILE CHECKSUM: 853d460f1205b58307b3c1009b2bc68fd80ff847
 
 COCOAPODS: 1.9.0

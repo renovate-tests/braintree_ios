@@ -50,18 +50,55 @@
     [self waitForExpectationsWithTimeout:5 handler:nil];
 }
 
-- (void)pendFetchConfiguration_withPayPalUAT_returnsTheConfiguration {
-    // NOTE: - This UAT will expire. To run this test, you must generate a fresh UAT.
+- (void)testFetchConfiguration_withPayPalUAT_returnsTheConfiguration {
+    XCTestExpectation *expectation = [self expectationWithDescription:@"Fetch UAT from PPCP sample server; then fetch BT config"];
 
-    BTAPIClient *client = [[BTAPIClient alloc] initWithAuthorization:@"eyJraWQiOiI1NTY1MWVhZWE0MjZjZDVhMjM5ZWU0ZjUwMTczMDk3NmI2YzMxZmNkIiwidHlwIjoiSldUIiwiYWxnIjoiRVMyNTYifQ.eyJpc3MiOiJodHRwczovL2FwaS5wYXlwYWwuY29tIiwic3ViIjoiUGF5UGFsOlc1Skw2VlVKVTlUTUwiLCJhY3IiOlsiY2xpZW50Il0sIm9wdGlvbnMiOnt9LCJheiI6Im1zbWFzdGVyMWludC1nX2lkZW50aXR5c2VjdXJldG9rZW5zZXJ2XzEucWEiLCJzY29wZXMiOlsiQnJhaW50cmVlOlZhdWx0Il0sImV4cCI6MTU3ODYzMDE1MywiZXh0ZXJuYWxfaWRzIjpbIlBheVBhbDpXNUpMNlZVSlU5VE1MIiwiQnJhaW50cmVlOm15bWt5Mm12eDVteWo1eXoiXSwianRpIjoiVTJBQUhhenpIQm1NU3Z0RXhEM1ZIak5PWWZaSFBKOHdTaGVVNEM1NFg1cTVMSnNQcTBvRVJneUVMM0FHRmlsUC1vMDhfQ0lnbzlSS3dqSUw4MzZoT3ZlZkVjcGtIWXMzZUh0OE5KYVhYZmdvZzJJNmk1Nmp2QW5zdlhNSUtlY3cifQ.GXhER7Ttn7QIqZ8Zq4Zj7iV6qyFbDddcemS9id2VyJidBgZWZZgg5Je8p7LUXcBfsjZrWaBYSepERTIEHSXHzg"];
+    // NOTE: - This test needs to fetch an active PayPal UAT
+    // Currently, the PP team cannot provide hard-coded UAT test values
+    [self fetchPayPalUAT:^(NSString *uat, NSError * _Nullable error) {
+        if (error) {
+            XCTFail(@"Error fetching a UAT from https://ppcp-sample-merchant-sand.herokuapp.com");
+        }
 
-    XCTestExpectation *expectation = [self expectationWithDescription:@"Fetch configuration"];
-    [client fetchOrReturnRemoteConfiguration:^(BTConfiguration *configuration, NSError *error) {
-        XCTAssertEqualObjects([configuration.json[@"merchantId"] asString], @"mymky2mvx5myj5yz");
-        XCTAssertNil(error);
-        [expectation fulfill];
+        BTAPIClient *client = [[BTAPIClient alloc] initWithAuthorization:uat];
+
+        [client fetchOrReturnRemoteConfiguration:^(BTConfiguration *configuration, NSError *error) {
+            XCTAssertEqualObjects([configuration.json[@"merchantId"] asString], @"cfxs3ghzwfk2rhqm");
+            XCTAssertEqualObjects([configuration.json[@"environment"] asString], @"sandbox");
+            XCTAssertEqualObjects([configuration.json[@"assetsUrl"] asString], @"https://assets.braintreegateway.com");
+            XCTAssertNil(error);
+            [expectation fulfill];
+        }];
+
     }];
 
-    [self waitForExpectationsWithTimeout:5 handler:nil];
+    [self waitForExpectationsWithTimeout:20 handler:nil];
 }
+
+#pragma mark - Helpers
+
+-(void)fetchPayPalUAT:(void (^)(NSString *uat, NSError * _Nullable error))completion {
+    NSMutableURLRequest *urlRequest = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:@"https://ppcp-sample-merchant-sand.herokuapp.com/uat?countryCode=US"]];
+
+    [urlRequest setHTTPMethod:@"POST"];
+
+    NSURLSessionDataTask *dataTask = [[NSURLSession sharedSession] dataTaskWithRequest:urlRequest completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+        if (error) {
+            completion(nil, error);
+        }
+
+        NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *)response;
+        if (httpResponse.statusCode == 200) {
+            NSError *parseError = nil;
+            NSDictionary *responseDictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:&parseError];
+
+            completion(responseDictionary[@"universal_access_token"], parseError);
+        }
+
+        completion(nil, nil);
+    }];
+
+    [dataTask resume];
+}
+
 @end
