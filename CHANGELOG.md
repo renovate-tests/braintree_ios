@@ -6,6 +6,7 @@
 * Add `lastFour` property to `BTCardNonce`
 * Make `BTURLUtils.h` public
 * Add support for authorizing the Braintree SDK with a `PayPalUAT` (universal access token)
+* Remove `AddressBook.framework` from Podspec (thanks @ignotusverum)
 
 ## 4.32.1 (2020-02-21)
 
@@ -941,4 +942,3 @@ Thanks for the feedback so far. Keep it coming!
     * Incomplete / unpolished UI
         * Minor UX card validation issues in the card form
         * Drop-in UX flow issues and unaddressed edge cases
-
