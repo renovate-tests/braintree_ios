@@ -107,7 +107,7 @@ class BTPayPalUAT_Tests: XCTestCase {
             let _ = try BTPayPalUAT(uatString: uatString)
             XCTFail()
         } catch {
-            XCTAssertEqual(error.localizedDescription, "Invalid PayPal UAT: Associated shadow account merchant ID missing.")
+            XCTAssertEqual(error.localizedDescription, "Invalid PayPal UAT: Associated Braintree merchant ID missing.")
         }
     }
 
@@ -123,7 +123,7 @@ class BTPayPalUAT_Tests: XCTestCase {
             let _ = try BTPayPalUAT(uatString: uatString)
             XCTFail()
         } catch {
-            XCTAssertEqual(error.localizedDescription, "Invalid PayPal UAT: Associated shadow account merchant ID missing.")
+            XCTAssertEqual(error.localizedDescription, "Invalid PayPal UAT: Associated Braintree merchant ID missing.")
         }
     }
 }

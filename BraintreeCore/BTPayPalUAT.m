@@ -31,7 +31,7 @@ NSString * const BTPayPalUATErrorDomain = @"com.braintreepayments.BTPayPalUATErr
             if (error) {
                 *error = [NSError errorWithDomain:BTPayPalUATErrorDomain
                                              code:BTPayPalUATErrorUnlinkedAccount
-                                         userInfo:@{NSLocalizedDescriptionKey:@"Invalid PayPal UAT: Associated shadow account merchant ID missing."}];
+                                         userInfo:@{NSLocalizedDescriptionKey:@"Associated Braintree merchant ID missing."}];
             }
             return nil;
         }
