@@ -31,6 +31,20 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic, readonly, strong) NSURL *basePayPalURL;
 
+/**
+ Error codes associated with a PayPal UAT.
+ */
+typedef NS_ENUM(NSInteger, BTPayPalUATError) {
+    /// Unknown error
+    BTPayPalUATErrorUnknown = 0,
+
+    /// Invalid
+    BTPayPalUATErrorInvalid,
+
+    /// UAT missing associated Braintree merchant ID
+    BTPayPalUATErrorUnlinkedAccount,
+};
+
 @end
 
 NS_ASSUME_NONNULL_END

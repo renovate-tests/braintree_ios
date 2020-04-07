@@ -30,8 +30,8 @@ NSString * const BTPayPalUATErrorDomain = @"com.braintreepayments.BTPayPalUATErr
         if (!braintreeMerchantID) {
             if (error) {
                 *error = [NSError errorWithDomain:BTPayPalUATErrorDomain
-                                             code:0
-                                         userInfo:@{NSLocalizedDescriptionKey:@"Invalid PayPal UAT: Braintree merchant id not found."}];
+                                             code:BTPayPalUATErrorUnlinkedAccount
+                                         userInfo:@{NSLocalizedDescriptionKey:@"Invalid PayPal UAT: Associated shadow account merchant ID missing."}];
             }
             return nil;
         }
@@ -51,7 +51,7 @@ NSString * const BTPayPalUATErrorDomain = @"com.braintreepayments.BTPayPalUATErr
         if (!basePayPalURL || !braintreeGatewayURL) {
             if (error) {
                 *error = [NSError errorWithDomain:BTPayPalUATErrorDomain
-                                             code:0
+                                             code:BTPayPalUATErrorInvalid
                                          userInfo:@{NSLocalizedDescriptionKey:@"Invalid PayPal UAT: Issuer missing or unknown."}];
             }
             return nil;
@@ -72,7 +72,7 @@ NSString * const BTPayPalUATErrorDomain = @"com.braintreepayments.BTPayPalUATErr
     if (payPalUATComponents.count != 3) {
         if (error) {
             *error = [NSError errorWithDomain:BTPayPalUATErrorDomain
-                                         code:0
+                                         code:BTPayPalUATErrorInvalid
                                      userInfo:@{NSLocalizedDescriptionKey:@"Invalid PayPal UAT: Missing payload."}];
         }
         return nil;
@@ -84,7 +84,7 @@ NSString * const BTPayPalUATErrorDomain = @"com.braintreepayments.BTPayPalUATErr
     if (!base64DecodedPayPalUAT) {
         if (error) {
             *error = [NSError errorWithDomain:BTPayPalUATErrorDomain
-                                         code:0
+                                         code:BTPayPalUATErrorInvalid
                                      userInfo:@{NSLocalizedDescriptionKey:@"Invalid PayPal UAT: Unable to base-64 decode payload."}];
         }
         return nil;
@@ -97,7 +97,7 @@ NSString * const BTPayPalUATErrorDomain = @"com.braintreepayments.BTPayPalUATErr
     if (JSONError) {
         if (error) {
             *error = [NSError errorWithDomain:BTPayPalUATErrorDomain
-                                         code:0
+                                         code:BTPayPalUATErrorInvalid
                                      userInfo:@{NSLocalizedDescriptionKey:[NSString stringWithFormat:@"Invalid PayPal UAT: %@", JSONError.localizedDescription]}];
         }
         return nil;
@@ -106,7 +106,7 @@ NSString * const BTPayPalUATErrorDomain = @"com.braintreepayments.BTPayPalUATErr
     if (![rawPayPalUAT isKindOfClass:[NSDictionary class]]) {
         if (error) {
             *error = [NSError errorWithDomain:BTPayPalUATErrorDomain
-                                         code:0
+                                         code:BTPayPalUATErrorInvalid
                                      userInfo:@{NSLocalizedDescriptionKey: @"Invalid PayPal UAT: Expected to find an object at JSON root."}];
         }
         return nil;
